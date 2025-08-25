@@ -1,0 +1,98 @@
+[
+    {
+        "modalId": "102",
+        "img": "dannys-cakes.png",
+        "description": "Repostería Artesanal",
+        "correo": "dannygutjara@gmail.com",
+        "casa": "472",
+        "whatsapp": "70488243",
+        "nombre": "Danny's cakes",
+        "representante": "Daniela Gutierrez",
+        "linkFB": "https://www.facebook.com/Dannys-Cakes-1821004994625238/",
+        "linkIG": ""
+    },
+    {
+        "modalId": "116",
+        "img": "pijamas-mami.png",
+        "description": "Pijamas para niños y adultos",
+        "correo": "judi_2894@hotmail.com",
+        "casa": "292",
+        "whatsapp": "89423316",
+        "nombre": "Pijamas de Mami",
+        "representante": "Judith López",
+        "linkFB": "https://facebook.com/Pijamasdemami/",
+        "linkIG": ""
+    },
+    {
+        "modalId": "120",
+        "img": "",
+        "description": "Chileras, escabeche ",
+        "correo": "talytaracena@gmail.com",
+        "casa": "102",
+        "whatsapp": "88289761",
+        "nombre": "Chileras Taly",
+        "representante": "Nathalie Taracena",
+        "linkFB": "",
+        "linkIG": ""
+    },
+    {
+        "modalId": "119",
+        "img": "catalogos-tn.png",
+        "description": "L'bel-Ésika-Cyzone-Leonisa-Vianney-Tupperware Perfumes, Tratamiento Facial, Maquillaje, Aguas Refrescantes, Joyería, Productos de bebé y mucho más!Todo a super precio!",
+        "correo": "dquispej@gmail.com",
+        "casa": "305",
+        "whatsapp": "83233456",
+        "nombre": "Catálogos Terrazas del Norte",
+        "representante": "Diana",
+        "linkFB": "https://www.facebook.com/Cat%C3%A1logos-Terrazas-del-Norte-104170301276598/?modal=admin_todo_tour",
+        "linkIG": "https://instagram.com/catalogos.terrazas/"
+    },
+    {
+        "modalId": "124",
+        "img": "",
+        "description": "Fresas Hidroponicas",
+        "correo": "luis.moram0710@gmail.com",
+        "casa": "190",
+        "whatsapp": "88084507",
+        "nombre": "Fresas Peymo",
+        "representante": "Luis Mora",
+        "linkFB": "https://www.facebook.com/FresasPeymoCR/",
+        "linkIG": ""
+    },
+    {
+        "modalId": "134",
+        "img": "si-al-amor.png",
+        "description": "Agendas para organizar la boda y agendas para damas de honor. Invitaciones Números de mesa Rotafolios",
+        "correo": "sialamorcr@outlook.com",
+        "casa": "308",
+        "whatsapp": "60933676",
+        "nombre": "Sí al amor ",
+        "representante": "Sherryl Villalobos ",
+        "linkFB": "https://www.facebook.com/Sí-al-amor-1464843073659482/",
+        "linkIG": ""
+    },
+    {
+        "modalId": "221",
+        "img": "entretrenzas.png",
+        "description": " Peinado, maquillaje, talleres. Cejas: diseño, sombreado, microblading & Microshading.",
+        "correo": "entretrenzascr506@gmail.com",
+        "casa": "16",
+        "whatsapp": "72764801",
+        "nombre": "EntreTrenzas Studio",
+        "representante": "Lissette",
+        "linkFB": "https://www.facebook.com/entretrenzascr/",
+        "linkIG": "https://instagram.com/entretrenzas_cr"
+    },
+    {
+        "modalId": "223",
+        "img": "",
+        "description": "Servicios de Peinados para toda ocasión, plancha y blower.",
+        "correo": "lkimberly@hotmail.es",
+        "casa": "168",
+        "whatsapp": "83849003",
+        "nombre": "Hair Beauty by Kim Loaiza",
+        "representante": "Kimberly Loaiza Cubero",
+        "linkFB": "",
+        "linkIG": "https://instagram.com/hairbeauty_by_kimloaiza"
+    },
+]

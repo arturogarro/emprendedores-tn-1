@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5">
+  <title>Localización de Casas</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Localización de Casas</title>
+  <style>
+    body {margin:0}
+    .top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f0f0f0;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      max-height: 120px;
+    }
+    .top h1 {
+      text-align: center;
+    }
+    .top input {
+
+    margin:  0 auto;
+    display: block;
+    width: 50%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    }
+    .top button {
+      display: block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    }
+    #svg-container {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    }
+    @media (min-width: 768px) {
+      #svg-container {
+        top: 150px;
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="top">
+  <h1>Buscar casa</h1>
+  <input type="number" id="inputCasa" placeholder="Número de casa (1-546)" min="1" max="546" />
+  <button onclick="marcarCasa()">Buscar casa</button>
+</div>
+  
+
+  <div id="svg-container"></div>
+
+  <script>
+    let svgDoc;
+
+    // Cargar el SVG al iniciar
+    fetch('localizacion.svg')
+      .then(response => response.text())
+      .then(svgText => {
+        document.getElementById('svg-container').innerHTML = svgText;
+        svgDoc = document.querySelector('#svg-container svg');
+
+        // Revisar parámetros de URL después de cargar el SVG
+        const params = new URLSearchParams(window.location.search);
+        const casaParam = params.get("casa");
+
+        if (casaParam) {
+          const input = document.getElementById('inputCasa');
+          input.value = casaParam;
+          marcarCasa();
+        }
+      });
+
+    function marcarCasa() {
+      const num = parseInt(document.getElementById('inputCasa').value);
+      if (isNaN(num) || num < 1 || num > 546) {
+        alert("¡Hey! Esa casa no existe.");
+        return;
+      }
+
+      const id = `casa${num}`;
+      const clase = `casa-${num}`;
+
+
+      const elemento = document.getElementById('svg-container');
+      if (elemento) {
+    
+        elemento.classList.forEach(c => {
+          if (/^casa-\d+$/.test(c)) {
+            elemento.classList.remove(c);
+          }
+        });
+        elemento.classList.add(clase);
+        history.replaceState(null, '', `?casa=${num}`);
+      } else {
+        alert("Casa no encontrada en el SVG");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const casaParam = params.get("casa");
+
+      if (casaParam) {
+        const input = document.getElementById('inputCasa');
+        input.value = casaParam;
+        marcarCasa();
+      }
+      document.getElementById('inputCasa').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    marcarCasa();
+  }
+});
+    });
+  </script>
+
+</body>
+
+</html>
